@@ -1,0 +1,146 @@
+@import './variables';
+@import './mixins';
+@import './functions';
+
+
+body {
+    background-color: $color-background;
+
+    #container {
+        width: 1000px;
+        margin: auto;
+        /* Выравниваем по центру */
+        font-family: Arial, sans-serif;
+
+        #header {
+            background-color: $color-header;
+            height: 80px;
+            border: 2px solid $color-header-border;
+            /* Параметры рамки */
+            border-radius: 8px;
+            display: flex;
+            /* Определяет flex контейнер */
+            align-items: center;
+            @include shape-shadow();
+
+            /* Центрирование элементов flex контейнера по вертикали*/
+            img {
+                border: 1px solid $color-img-border;
+                height: 60px;
+                width: 60px;
+                margin-left: $horizontal_indent;
+                @include shape-shadow();
+            }
+
+            span {
+                color: $color-gamma;
+                background-color: $color-dark;
+                margin-left: 20px;
+                font-weight: bold;
+                padding: 5px;
+                @include shape-shadow();
+            }
+
+            button {
+                background-color: $color-button;
+                color: $color-button-text;
+                font-weight: bold;
+                height: 40px;
+                width: 80px;
+                border: 2px solid $color-primary-gamma;
+                border-radius: 8px;
+                margin-left: auto;
+                /* Прижимает элемент к правому краю родителя */
+                margin-right: $horizontal_indent;
+                transition: 0.3s;
+                @include shape-shadow();
+
+                &:hover {
+                    background-color: $color-alpha;
+                    transform: scale(1.2);
+                    opacity: 0.6;
+                }
+            }
+        }
+
+        #heading {
+            color: $color-text;
+            margin-left: 100px;
+        }
+
+        #content {
+            margin: auto;
+            display: grid;
+            /* Определяет grid контейнер */
+            grid-template-columns: 1fr 1fr 0fr;
+            /* Задает количество и размер строк. fr — единица длины, которая позволяет создавать гибкие дорожки. */
+            row-gap: 30px;
+            /* Добавляет отступы между строками*/
+            width: 800px;
+
+            .object_card {
+                width: 200px;
+                @include text-gradient();
+
+                .object_picture {
+                    position: relative;
+                    transition: 0.3s;
+
+                    &:hover {
+                        transform: scale(1.2);
+                        opacity: 0.6;
+                    }
+
+                    img {
+                        height: 200px;
+                        width: 200px;
+                        border: 2px solid $color-img-border;
+                        image-rendering: optimizeQuality;
+                        @include shape-shadow();
+                    }
+
+                    .object_type {
+                        position: absolute;
+                        left: 5%;
+                        top: 5%;
+                        padding: 1px;
+                        padding-right: 15px;
+                        background-color: $color-object_type-background;
+                        color: $color-text;
+                        opacity: 0.7;
+                        border: 2px solid $color-text;
+                        height: min-content;
+                        width: fit-content;
+                        @include shape-shadow();
+                    }
+                }
+
+                h3 {
+                    text-shadow: 1px 1px 1px $color-alpha, 0 0 1em $color-beta, 0 0 0.2em $color-delta;
+                }
+
+                .object_description {
+                    text-shadow: 1px 1px 1px $color-alpha;
+                }
+
+            }
+        }
+
+        hr {
+            margin-top: 100px;
+            margin-bottom: 50px;
+        }
+
+        #footer {
+            width: 800px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            img {
+                width: 100px;
+            }
+        }
+    }
+}

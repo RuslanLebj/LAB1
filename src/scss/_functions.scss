@@ -1,0 +1,3 @@
+@function color-count($i) {
+    @return rgb(60 * $i, 10 * $i, 10 * $i);
+}

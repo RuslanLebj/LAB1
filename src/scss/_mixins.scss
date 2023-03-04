@@ -1,0 +1,26 @@
+@import './functions';
+@import './variables';
+
+@mixin text-gradient() {
+    color: color-count(1);
+
+    &:nth-child(2n) {
+        color: color-count(2);
+    }
+
+    &:nth-child(3n) {
+        color: color-count(3);
+    }
+
+    &:nth-child(4n) {
+        color: color-count(4);
+    }
+
+    &:nth-child(5n) {
+        color: color-count(5);
+    }
+}
+
+@mixin shape-shadow(){
+    box-shadow: 5px 3px 4px 1px $color-shadow;
+}

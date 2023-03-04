@@ -1,0 +1,114 @@
+@charset "UTF-8";
+body {
+  background-color: #D3D3D3; }
+  body #container {
+    width: 1000px;
+    margin: auto;
+    /* Выравниваем по центру */
+    font-family: Arial, sans-serif; }
+    body #container #header {
+      background-color: #BA181B;
+      height: 80px;
+      border: 2px solid #640709;
+      /* Параметры рамки */
+      border-radius: 8px;
+      display: flex;
+      /* Определяет flex контейнер */
+      align-items: center;
+      box-shadow: 5px 3px 4px 1px #1d1d1d;
+      /* Центрирование элементов flex контейнера по вертикали*/ }
+      body #container #header img {
+        border: 1px solid #0b090a;
+        height: 60px;
+        width: 60px;
+        margin-left: 100px;
+        box-shadow: 5px 3px 4px 1px #1d1d1d; }
+      body #container #header span {
+        color: #BA181B;
+        background-color: #0b090a;
+        margin-left: 20px;
+        font-weight: bold;
+        padding: 5px;
+        box-shadow: 5px 3px 4px 1px #1d1d1d; }
+      body #container #header button {
+        background-color: #0b090a;
+        color: #D3D3D3;
+        font-weight: bold;
+        height: 40px;
+        width: 80px;
+        border: 2px solid #D3D3D3;
+        border-radius: 8px;
+        margin-left: auto;
+        /* Прижимает элемент к правому краю родителя */
+        margin-right: 100px;
+        transition: 0.3s;
+        box-shadow: 5px 3px 4px 1px #1d1d1d; }
+        body #container #header button:hover {
+          background-color: #640709;
+          transform: scale(1.2);
+          opacity: 0.6; }
+    body #container #heading {
+      color: #0b090a;
+      margin-left: 100px; }
+    body #container #content {
+      margin: auto;
+      display: grid;
+      /* Определяет grid контейнер */
+      grid-template-columns: 1fr 1fr 0fr;
+      /* Задает количество и размер строк. fr — единица длины, которая позволяет создавать гибкие дорожки. */
+      row-gap: 30px;
+      /* Добавляет отступы между строками*/
+      width: 800px; }
+      body #container #content .object_card {
+        width: 200px;
+        color: #3c0a0a; }
+        body #container #content .object_card:nth-child(2n) {
+          color: #781414; }
+        body #container #content .object_card:nth-child(3n) {
+          color: #b41e1e; }
+        body #container #content .object_card:nth-child(4n) {
+          color: #f02828; }
+        body #container #content .object_card:nth-child(5n) {
+          color: #ff3232; }
+        body #container #content .object_card .object_picture {
+          position: relative;
+          transition: 0.3s; }
+          body #container #content .object_card .object_picture:hover {
+            transform: scale(1.2);
+            opacity: 0.6; }
+          body #container #content .object_card .object_picture img {
+            height: 200px;
+            width: 200px;
+            border: 2px solid #0b090a;
+            image-rendering: optimizeQuality;
+            box-shadow: 5px 3px 4px 1px #1d1d1d; }
+          body #container #content .object_card .object_picture .object_type {
+            position: absolute;
+            left: 5%;
+            top: 5%;
+            padding: 1px;
+            padding-right: 15px;
+            background-color: #E5383B;
+            color: #0b090a;
+            opacity: 0.7;
+            border: 2px solid #0b090a;
+            height: min-content;
+            width: fit-content;
+            box-shadow: 5px 3px 4px 1px #1d1d1d; }
+        body #container #content .object_card h3 {
+          text-shadow: 1px 1px 1px #640709, 0 0 1em #A4161A, 0 0 0.2em #E5383B; }
+        body #container #content .object_card .object_description {
+          text-shadow: 1px 1px 1px #640709; }
+    body #container hr {
+      margin-top: 100px;
+      margin-bottom: 50px; }
+    body #container #footer {
+      width: 800px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      body #container #footer img {
+        width: 100px; }
+
+/*# sourceMappingURL=style.css.map */
